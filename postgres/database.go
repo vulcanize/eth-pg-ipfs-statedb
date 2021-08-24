@@ -288,6 +288,15 @@ func (d *Database) AppendAncient(number uint64, hash, header, body, receipt, td 
 	return errNotSupported
 }
 
+// ReadAncients retrieves multiple items in sequence, starting from the index 'start'.
+// It will return
+//  - at most 'count' items,
+//  - at least 1 item (even if exceeding the maxBytes), but will otherwise
+//   return as many items as fit into maxBytes.
+func (d *Database) ReadAncients(kind string, start, count, maxBytes uint64) ([][]byte, error) {
+	return nil, errNotSupported
+}
+
 // TruncateAncients satisfies the ethdb.AncientWriter interface
 // TruncateAncients discards all but the first n ancient data from the ancient store
 func (d *Database) TruncateAncients(n uint64) error {
