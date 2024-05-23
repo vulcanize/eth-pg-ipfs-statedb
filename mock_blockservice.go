@@ -20,11 +20,11 @@ import (
 	"context"
 	"errors"
 
+	"github.com/ipfs/boxo/blockservice"
+	"github.com/ipfs/boxo/blockstore"
+	"github.com/ipfs/boxo/exchange"
 	blocks "github.com/ipfs/go-block-format"
-	"github.com/ipfs/go-blockservice"
 	"github.com/ipfs/go-cid"
-	blockstore "github.com/ipfs/go-ipfs-blockstore"
-	exchange "github.com/ipfs/go-ipfs-exchange-interface"
 )
 
 var (

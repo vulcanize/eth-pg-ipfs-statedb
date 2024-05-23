@@ -17,7 +17,7 @@
 package pgipfsethdb
 
 import (
-	blockstore "github.com/ipfs/go-ipfs-blockstore"
+	blockstore "github.com/ipfs/boxo/blockstore"
 	dshelp "github.com/ipfs/go-ipfs-ds-help"
 	_ "github.com/lib/pq" //postgres driver
 	"github.com/multiformats/go-multihash"

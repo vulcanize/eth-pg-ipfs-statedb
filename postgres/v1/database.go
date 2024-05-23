@@ -319,9 +319,9 @@ func (d *Database) AncientSize(kind string) (uint64, error) {
 
 // AncientRange retrieves all the items in a range, starting from the index 'start'.
 // It will return
-//  - at most 'count' items,
-//  - at least 1 item (even if exceeding the maxBytes), but will otherwise
-//   return as many items as fit into maxBytes.
+//   - at most 'count' items,
+//   - at least 1 item (even if exceeding the maxBytes), but will otherwise
+//     return as many items as fit into maxBytes.
 func (d *Database) AncientRange(kind string, start, count, maxBytes uint64) ([][]byte, error) {
 	return nil, errNotSupported
 }
@@ -333,14 +333,14 @@ func (d *Database) ReadAncients(fn func(ethdb.AncientReaderOp) error) (err error
 
 // TruncateHead satisfies the ethdb.AncientWriter interface.
 // TruncateHead discards all but the first n ancient data from the ancient store.
-func (d *Database) TruncateHead(n uint64) error {
-	return errNotSupported
+func (d *Database) TruncateHead(n uint64) (uint64, error) {
+	return 0, errNotSupported
 }
 
 // TruncateTail satisfies the ethdb.AncientWriter interface.
 // TruncateTail discards the first n ancient data from the ancient store.
-func (d *Database) TruncateTail(n uint64) error {
-	return errNotSupported
+func (d *Database) TruncateTail(n uint64) (uint64, error) {
+	return 0, errNotSupported
 }
 
 // Sync satisfies the ethdb.AncientWriter interface

@@ -22,7 +22,7 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethdb"
 	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ipfs/go-blockservice"
+	"github.com/ipfs/boxo/blockservice"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 

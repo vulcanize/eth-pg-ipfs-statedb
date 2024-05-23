@@ -21,7 +21,7 @@ ethdb interfaces for Ethereum data on IPFS by handling the conversion of a kecca
 
 
 ## Usage
-To use this module import it and build an ethdb interface around an instance of a [go ipfs blockservice](https://github.com/ipfs/go-blockservice), you can then
+To use this module import it and build an ethdb interface around an instance of a [Go IPFS blockservice](https://pkg.go.dev/github.com/ipfs/boxo@v0.19.0/blockservice), you can then
 employ it as you would the usual [leveldb](https://github.com/ethereum/go-ethereum/tree/master/ethdb/leveldb) or [memorydb](https://github.com/ethereum/go-ethereum/tree/master/ethdb/memorydb) ethdbs
 with some exceptions: the AncientReader, AncientWriter, Compacter, and Iteratee/Iterator interfaces are not functionally complete.
 
@@ -46,7 +46,7 @@ import (
     "github.com/ethereum/go-ethereum/common"
     "github.com/ethereum/go-ethereum/core/state"
     "github.com/ethereum/go-ethereum/trie"
-    "github.com/ipfs/go-blockservice"
+    "github.com/ipfs/boxo/blockservice"
     "github.com/ipfs/go-ipfs/core"
     "github.com/ipfs/go-ipfs/repo/fsrepo"
     "github.com/jmoiron/sqlx"

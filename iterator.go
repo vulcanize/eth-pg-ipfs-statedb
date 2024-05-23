@@ -20,7 +20,7 @@ import (
 	"context"
 
 	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ipfs/go-blockservice"
+	"github.com/ipfs/boxo/blockservice"
 )
 
 var _ ethdb.Iterator = &Iterator{}

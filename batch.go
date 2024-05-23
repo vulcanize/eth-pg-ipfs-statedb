@@ -23,8 +23,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethdb"
 	lru "github.com/hashicorp/golang-lru"
+	"github.com/ipfs/boxo/blockservice"
 	blocks "github.com/ipfs/go-block-format"
-	"github.com/ipfs/go-blockservice"
 )
 
 var (
